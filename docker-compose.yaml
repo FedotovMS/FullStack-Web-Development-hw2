@@ -5,9 +5,9 @@ services:
     build: .
     container_name: fullstack-web-app
     ports:
-      - "5001:5000"
+      - "5001:8000"
     environment:
-      - DATABASE_URL=postgresql://postgres:password@db:5432/mydatabase
+      - DATABASE_URL=postgresql://postgres:password@db:5432/hw02
     depends_on:
       - db
 
@@ -15,8 +15,8 @@ services:
     image: postgres:13
     container_name: fullstack-db
     environment:
-      POSTGRES_DB: mydatabase
+      POSTGRES_DB: hw02
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: password
+      POSTGRES_PASSWORD: 567234
     ports:
       - "5432:5432"
